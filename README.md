@@ -38,8 +38,8 @@ Resultados principales del modelo 2017–2024:
 1. Clonar el repositorio:
 
 ```bash
-git clone https://github.com/[usuario]/2026-[carnet]-silvia-alejandra-illescas-fernandez.git
-cd 2026-[carnet]-silvia-alejandra-illescas-fernandez
+git clone https://github.com/GraduacionesUVG/2026-22376-illescas-fernandez-silvia-alejandra.git
+cd 2026-22376-illescas-fernandez-silvia-alejandra
 ```
 
 2. Instalar las dependencias:
@@ -48,18 +48,41 @@ cd 2026-[carnet]-silvia-alejandra-illescas-fernandez
 pip install pandas==2.3.1 numpy==2.3.1 scikit-learn==1.8.0 geopandas==1.1.4 rasterio matplotlib joblib pillow jupyter
 ```
 
-3. Configurar las variables de entorno: el proyecto no utiliza credenciales ni claves de API, por lo que `src/.env.example` solo documenta las rutas de datos. Antes de ejecutar el notebook se deben actualizar las rutas de los archivos de entrada, que están escritas para la carpeta local `C:\Users\Silvia\Documents\GradIncendiosPeten`.
+3. Descargar los datos pesados: por el límite de 100 MB por archivo de GitHub, los rásteres (`.tif`), los modelos entrenados (`.pkl`) y algunos shapefiles completos no se incluyen en el repositorio. Se pueden descargar aquí:
 
-4. Ejecutar:
+   **[Enlace de Google Drive](https://drive.google.com/drive/folders/1pfL1z3Pw32-IABakhftcRjjjnZMFs6hw?usp=drive_link)**
 
-   - **Modelo y mapas:** abrir `src/modelo_random_forest_ordenado.ipynb` y ejecutar las celdas en orden. La sección 10 contiene el modelo principal 2017–2024 y la sección 13 la validación con FIRMS.
+   Después de descargarlos, se deben colocar en las mismas carpetas de `src/` que se indican en la estructura del proyecto.
+
+4. Configurar las rutas: el proyecto no utiliza credenciales ni claves de API. Las rutas de los archivos de entrada del notebook están escritas para la carpeta local `C:\Users\Silvia\Documents\GradIncendiosPeten`, por lo que se deben actualizar antes de ejecutarlo.
+
+5. Ejecutar:
+
+   - **Modelo y mapas:** abrir `src/modelado/modelo_random_forest_ordenado.ipynb` y ejecutar las celdas en orden. La sección 10 contiene el modelo principal 2017–2024 y la sección 13 la validación con FIRMS.
    - **Análisis geoespacial** (estadísticas, cambio, persistencia, municipios, cuadrícula y validación):
 
      ```bash
-     python src/analisis_susceptibilidad_peten.py --datos "ruta/a/los/datos" --salida "ruta/salida"
+     python src/modelado/analisis_susceptibilidad_peten.py --datos "ruta/a/los/datos" --salida "ruta/salida"
      ```
 
-   - **Dashboard:** abrir `src/dashboard_incendios_peten.html` con doble clic. No requiere instalación ni conexión a internet.
+   - **Proyecto de QGIS:** abrir `src/qgis/Petén.qgz` para consultar las capas y los mapas.
+   - **Dashboard:** abrir `src/dashboard/dashboard_incendios_peten.html` con doble clic. No requiere instalación ni conexión a internet.
+
+### Estructura del proyecto
+
+```
+2026-22376-illescas-fernandez-silvia-alejandra/
+├── capturas/          # Capturas del dashboard en funcionamiento
+├── demo/              # demo.mp4, video demostrativo
+├── docs/              # Informe final y consentimiento firmado
+├── src/
+│   ├── data/          # Datos procesados: variables predictoras, detecciones FIRMS y dataset de modelado
+│   ├── modelado/      # Notebook del modelo Random Forest y script de análisis
+│   ├── qgis/          # Proyecto de QGIS
+│   ├── resultados/    # Mapas de susceptibilidad, cuadrícula de 5 km, municipios y tablas
+│   └── dashboard/     # Dashboard interactivo (HTML)
+└── README.md
+```
 
 ## Capturas
 
@@ -76,7 +99,7 @@ El video demostrativo se encuentra en [`/demo/demo.mp4`](./demo/demo.mp4).
 
 ## Autores
 
-- **Silvia Alejandra Illescas Fernández**, carné [carné]
+- **Silvia Alejandra Illescas Fernández**, carné 22376
 - Asesor: Diego Josue Incer Nuñez
 
 Universidad del Valle de Guatemala, 2026
