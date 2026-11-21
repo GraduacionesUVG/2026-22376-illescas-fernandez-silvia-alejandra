@@ -1,0 +1,104 @@
+﻿# Archivos auxiliares de QGIS
+*.tif.aux.xml
+*.qmd
+
+# Versiones anteriores y respaldos
+**/anteriores/
+**/anterior/
+
+# Datasets intermedios de presencias y ausencias
+data/processed/dataset_modelo/dataset_ausencias_20??_0[1-6].*
+data/processed/dataset_modelo/dataset_presencias_20??_0[1-6].*
+data/processed/dataset_modelo/dataset_presencias_20??_06shp.*
+
+# Modelo entrenado de gran tamaño
+modelado/random_forest_incendios.pkl
+
+# Archivos temporales de Python y Jupyter
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+
+@'
+
+# Versiones alternativas de temperatura 2020
+data/processed/temperature_anual/tmax_2020_30m_RECONSTRUIDO.tif
+data/processed/temperature_anual/tmax_2020_anual_reconstruido.tif
+'@ | Add-Content ".gitignore"
+# Archivos de mas de 100 MB (disponibles en Google Drive)
+data/processed/chirps_anual/precip_2015_30m_final1.tif
+data/processed/chirps_anual/precip_2016_30m.tif
+data/processed/chirps_anual/precip_2017_30m.tif
+data/processed/chirps_anual/precip_2018_30.tif
+data/processed/chirps_anual/precip_2019_30m.tif
+data/processed/chirps_anual/precip_2020_30m.tif
+data/processed/chirps_anual/precip_2021_30m.tif
+data/processed/chirps_anual/precip_2022_30m.tif
+data/processed/chirps_anual/precip_2023_30m.tif
+data/processed/chirps_anual/precip_2024_30m.tif
+data/processed/chirps_anual/precip_2025_30m.tif
+data/processed/chirps_anual/anteriores/precip_2015_30m.tif
+data/processed/chirps_anual/anteriores/precip_2015_30m_final.tif
+data/processed/chirps_anual/anteriores/precip_2015_30_final.tif
+data/processed/chirps_anual/anteriores/precip_2015_final.tif
+data/processed/chirps_anual/anteriores/precip_2015_modelo.tif
+data/processed/chirps_anual/anteriores/precip_2016_modelo.tif
+data/processed/chirps_anual/anteriores/precip_2017a_modelo.tif
+data/processed/chirps_anual/anteriores/precip_2017_modelo.tif
+data/processed/chirps_anual/anteriores/precip_2018_30m.tif
+data/processed/chirps_anual/anteriores/precip_2018_modelo.tif
+data/processed/chirps_anual/anteriores/precip_2019_modelo.tif
+data/processed/chirps_anual/anteriores/precip_2020_modelo.tif
+data/processed/chirps_anual/anteriores/precip_2021_modelo.tif
+data/processed/chirps_anual/anteriores/precip_2022_modelo.tif
+data/processed/chirps_anual/anteriores/precip_2023_modelo.tif
+data/processed/chirps_anual/anteriores/precip_2024_modelo.tif
+data/processed/chirps_anual/anteriores/precip_2025_modelo.tif
+data/processed/dataset_modelo/dataset_modelado_2015_2025.dbf
+data/processed/dataset_modelo/dataset_modelado_2015_2025_limpio.dbf
+data/processed/incendios/firms_peten_2015_2025_utm.dbf
+data/processed/poblados/distancia_poblados.tif
+data/processed/poblados/anteriores/poblados_peten_raster.tif
+data/processed/poblados/anteriores/roads_peten_raster.tif
+data/processed/temperature_anual/tmax_2015_30m.tif
+data/processed/temperature_anual/tmax_2016_30m.tif
+data/processed/temperature_anual/tmax_2017_30m.tif
+data/processed/temperature_anual/tmax_2018_30m.tif
+data/processed/temperature_anual/tmax_2019_30m.tif
+data/processed/temperature_anual/tmax_2020_30m.tif
+data/processed/temperature_anual/tmax_2020_30m_RECONSTRUIDO.tif
+data/processed/temperature_anual/tmax_2021_30m.tif
+data/processed/temperature_anual/tmax_2022_30m.tif
+data/processed/temperature_anual/tmax_2023_30m.tif
+data/processed/temperature_anual/tmax_2024_30m.tif
+data/processed/temperature_anual/tmax_2025_30m.tif
+data/processed/temperature_anual/anteriores/tmax_2020_30m_CORRECTO.tif
+data/processed/temperature_anual/anteriores/tmax_2020_30m_corregido.tif
+data/processed/temperature_anual/anteriores/tmax_2020_30m_final.tif
+data/processed/temperature_anual/anteriores/tmax_2020_30m_final2.tif
+data/processed/temperature_anual/anteriores/tmax_2020_30m_finalfinal.tif
+data/processed/temperature_anual/anteriores/tmax_2020_30m_sin_ceros.tif
+data/processed/topografia/dem_peten_utm.tif
+data/processed/topografia/pendiente_peten.tif
+data/processed/topografia/anteriores/dem_mosaico.tif
+data/processed/topografia/anteriores/dem_mosaico_final.tif
+data/processed/topografia/anteriores/dem_peten.tif
+data/processed/topografia/anteriores/dem_peten_final.tif
+data/processed/topografia/anteriores/dem_peten_finals.tif
+data/processed/vias/distancia_vias.tif
+data/processed/vias/anteriores/roads_binario.tif
+data/processed/vias/anteriores/roads_binario_final.tif
+data/processed/vias/anteriores/roads_peten_aligned.tif
+data/processed/vias/anteriores/roads_peten_raster.tif
+modelado/random_forest_incendios.pkl
+resultados/susceptibilidad_clases_2017_2024.tif
+resultados/zonas_alta_muy_alta_2017_2024.tif
+resultados/mapas_2017_2024_RF/susceptibilidad_final_2017_2024_RF.tif
+resultados/mapas_susceptibilidad/susceptibilidad_final_2015_2025.tif
+resultados/mapas_susceptibilidad/susceptibilidad_final_2017_2024.tif
+
+# Rasteres y modelos (disponibles en Google Drive)
+*.tif
+*.tif.aux.xml
+*.pkl
+**/anteriores/
